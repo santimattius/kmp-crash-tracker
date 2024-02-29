@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.santimattius.crash.tracker.CrashTracker
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
@@ -22,6 +23,9 @@ fun App() {
         var greetingText by remember { mutableStateOf("Hello World!") }
         var showImage by remember { mutableStateOf(false) }
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+            Button(onClick = { CrashTracker.instance().sendFatalException(Throwable("Test exception"))}) {
+                Text("Test Crash")
+            }
             Button(onClick = {
                 greetingText = "Compose: ${Greeting().greet()}"
                 showImage = !showImage

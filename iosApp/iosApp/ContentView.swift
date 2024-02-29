@@ -8,8 +8,13 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("SwiftUI: \(Greeting().greet())")
+            Button("Test crash"){
+                CrashTracker.companion.instance().logMessage(message: "Hello")
+                
+            }
         }
         .padding()
+        
     }
 }
 
