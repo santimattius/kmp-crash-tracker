@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import com.santimattius.crash.tracker.CrashTracker
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
+import kotlin.random.Random
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
@@ -27,7 +28,11 @@ fun App() {
             )
             Button(
                 onClick = {
-                    CrashTracker.instance().sendHandledException(Throwable("Exception:${Greeting().greet()}"))
+                    CrashTracker.instance().sendHandledException(
+                        throwable = Throwable(
+                            message = "Exception ${Random.nextLong()}"
+                        )
+                    )
                 },
                 content = { Text("Compose: ${Greeting().greet()}") }
             )

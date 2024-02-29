@@ -13,7 +13,7 @@ class MainApplication : Application() {
                 context = this,
                 apiKey = BuildConfig.bugsnagApiKey
             ),
-            providers = Providers.Default
+            providers = Providers.Bugsnag
         )
     }
 }

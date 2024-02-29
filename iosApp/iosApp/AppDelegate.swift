@@ -13,7 +13,9 @@ import Shared
 class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
         let appCredentials = readAppCredentials()
+        
         CrashTracker.companion.initialize(
             config: CrashTrackerConfig(
                 apiKey: appCredentials.bugsnagApiKey

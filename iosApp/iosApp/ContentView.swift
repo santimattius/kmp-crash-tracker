@@ -9,7 +9,7 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Text("SwiftUI: \(Greeting().greet())")
             Button("Test crash"){
-                CrashTracker.companion.instance().logMessage(message: "Hello")
+                CrashTracker.companion.instance().sendFatalException(throwable: KotlinThrowable(message: "Testing"))
                 
             }
         }
