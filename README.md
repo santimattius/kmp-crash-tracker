@@ -49,7 +49,7 @@ Pods/FirebaseCrashlytics/upload-symbols -gsp iosApp/GoogleService-Info.plist -p 
 ```
 
 <p align="center">
-  <img height="600" src="https://github.com/santimattius/kmm-marvel-app/blob/master/screenshots/kmm_ios_home.png?raw=true" alt="rule"/>
+  <img src="https://github.com/santimattius/kmp-crash-tracker/blob/main/capture/crashlytics-dsym.png?raw=true" alt="rule"/>
 </p>
 
 ## Init library
