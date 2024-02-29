@@ -16,6 +16,4 @@ captures
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 /iosApp/iosApp/GoogleService-Info.plist
-/iosApp/iosApp/Credentials.plist
 composeApp/src/google-services.json
-iosApp/iosApp/Credentials.plist
